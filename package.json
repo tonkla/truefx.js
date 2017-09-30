@@ -1,0 +1,19 @@
+{
+  "name": "truefx",
+  "version": "0.1.2",
+  "description": "The TrueFX API client for Node.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "babel src -d lib && npm test"
+  },
+  "repository": "tonkla/truefx.js",
+  "author": "Surakarn Samkaew <tonkla@gmail.com>",
+  "keywords": ["truefx", "forex"],
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "mocha": "^3.5.3"
+  }
+}
