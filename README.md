@@ -1,6 +1,6 @@
 # TrueFX
 
-The TrueFX API client for Node.js. Read [TrueFX](https://www.truefx.com/) for more information.
+The TrueFX API client for Node.js. For more information, please see the [TrueFX](https://www.truefx.com/).
 
 ## Installation
 
@@ -10,7 +10,7 @@ npm install truefx
 
 ## Usage
 
-TrueFX provides a price feed of these ten pairs by default,  
+TrueFX provides a price feed of these ten pairs by default,
 EUR/USD, USD/JPY, GBP/USD, EUR/GBP, USD/CHF, EUR/JPY, EUR/CHF, USD/CAD, AUD/USD, GBP/JPY
 
 * get all: `truefx.get()`
@@ -19,32 +19,34 @@ EUR/USD, USD/JPY, GBP/USD, EUR/GBP, USD/CHF, EUR/JPY, EUR/CHF, USD/CAD, AUD/USD,
 
 ```javascript
 const truefx = require('truefx')
-const results = truefx.get('eurusd')
-console.log(results)
+truefx.get('eurusd').then(response => {
+  console.log(response)
+})
 ```
 
 Results
 
-```
-{EUR/USD 1505927503092 1.19999 1.20004 1.20224 1.19838 1.19942 0.5}
-Symbol: EUR/USD
-Timestamp: 1505927503092
-Bid: 1.19999
-Offer: 1.20004
-High: 1.20224
-Low: 1.19838
-Open: 1.19942
-Spread: 0.5
+```json
+[ { symbol: 'EUR/USD',
+    timestamp: '1507217077873',
+    bid: 1.17097,
+    offer: 1.17099,
+    low: 1.1705,
+    high: 1.1779,
+    open: 1.17615,
+    spread: 0.2 } ]
 ```
 
 Authorized session can access to more minor pairs. [Register](https://www.truefx.com).
 
-AUD/CAD, AUD/CHF, AUD/JPY, AUD/NZD, CAD/CHF, CAD/JPY, CHF/JPY, EUR/AUD, EUR/CAD,  
+AUD/CAD, AUD/CHF, AUD/JPY, AUD/NZD, CAD/CHF, CAD/JPY, CHF/JPY, EUR/AUD, EUR/CAD,
 EUR/NOK, EUR/NZD, GBP/CAD, GBP/CHF, NZD/JPY, NZD/USD, USD/NOK, USD/SEK
 
 ```javascript
 const truefx = require('truefx')
-truefx.authenticate('username', 'password').get('audjpy')
+truefx.authenticate('username', 'password').get('audjpy').then(response => {
+  console.log(response)
+})
 ```
 
 1. Fork it ( https://github.com/tonkla/truefx.js/fork )
