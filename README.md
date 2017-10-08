@@ -10,13 +10,13 @@ npm install truefx
 
 ## Usage
 
-TrueFX provides a price feed of these ten pairs by default,  
+TrueFX provides a price feed of these ten pairs by default,
 
 EUR/USD, USD/JPY, GBP/USD, EUR/GBP, USD/CHF, EUR/JPY, EUR/CHF, USD/CAD, AUD/USD, GBP/JPY
 
 * get all: `truefx.get()`
-* get by the specific symbol: `truefx.get("EUR/USD")` or `truefx.get("eurusd")`
-* get more, separated by comma: `truefx.get("EUR/USD,USD/JPY")` or `truefx.get("eurusd,usdjpy")`
+* get by the specific symbol: `truefx.get('EUR/USD')` or `truefx.get('eurusd')`
+* get more, separated by comma: `truefx.get('EUR/USD,USD/JPY')` or `truefx.get('eurusd,usdjpy')`
 
 ```javascript
 const truefx = require('truefx')
