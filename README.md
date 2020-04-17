@@ -14,13 +14,13 @@ TrueFX provides a price feed of these ten pairs by default,
 
 EUR/USD, USD/JPY, GBP/USD, EUR/GBP, USD/CHF, EUR/JPY, EUR/CHF, USD/CAD, AUD/USD, GBP/JPY
 
-* get all: `truefx.get()`
-* get by the specific symbol: `truefx.get('EUR/USD')` or `truefx.get('eurusd')`
-* get more, separated by comma: `truefx.get('EUR/USD,USD/JPY')` or `truefx.get('eurusd,usdjpy')`
+- get all: `truefx.get()`
+- get by the specific symbol: `truefx.get('EUR/USD')` or `truefx.get('eurusd')`
+- get more, separated by comma: `truefx.get('EUR/USD,USD/JPY')` or `truefx.get('eurusd,usdjpy')`
 
 ```javascript
 const truefx = require('truefx')
-truefx.get('eurusd').then(response => {
+truefx.get('eurusd').then((response) => {
   console.log(response)
 })
 ```
@@ -45,7 +45,8 @@ EUR/NOK, EUR/NZD, GBP/CAD, GBP/CHF, NZD/JPY, NZD/USD, USD/NOK, USD/SEK
 
 ```javascript
 const truefx = require('truefx')
-truefx.authenticate('username', 'password').get('audjpy').then(response => {
+const session = truefx.authenticate('username', 'password')
+truefx.get('audjpy', session).then((response) => {
   console.log(response)
 })
 ```
